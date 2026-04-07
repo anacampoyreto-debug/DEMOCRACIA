@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La democracia ateniense</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f4f8fc;
+      color:#1f2937;
+      line-height:1.6;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#2563eb,#60a5fa);
+      color:white;
+      border-radius:24px;
+      padding:28px;
+      box-shadow:0 10px 28px rgba(0,0,0,.12);
+      margin-bottom:22px;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-size:2rem;
+    }
+
+    .hero p{
+      margin:0;
+      font-size:1.05rem;
+    }
+
+    .card{
+      background:white;
+      border-radius:22px;
+      padding:22px;
+      margin-bottom:20px;
+      box-shadow:0 8px 24px rgba(15,23,42,.08);
+    }
+
+    h2{
+      margin-top:0;
+      color:#1d4ed8;
+      font-size:1.4rem;
+    }
+
+    h3{
+      color:#b45309;
+      margin-bottom:10px;
+    }
+
+    .subtle{
+      color:#475569;
+    }
+
+    .visual-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .box{
+      border-radius:18px;
+      padding:16px;
+      font-weight:bold;
+    }
+
+    .blue{ background:#dbeafe; color:#1e3a8a; }
+    .yellow{ background:#fef3c7; color:#92400e; }
+    .green{ background:#dcfce7; color:#166534; }
+    .pink{ background:#fce7f3; color:#9d174d; }
+    .purple{ background:#ede9fe; color:#5b21b6; }
+
+    .activity{
+      background:#f8fafc;
+      border:2px solid #e2e8f0;
+      border-radius:18px;
+      padding:18px;
+      margin-top:16px;
+    }
+
+    .task{
+      font-weight:bold;
+      margin-bottom:10px;
+    }
+
+    .mini{
+      font-size:.96rem;
+      color:#64748b;
+    }
+
+    .copy-box{
+      background:#eff6ff;
+      border:2px dashed #60a5fa;
+      border-radius:16px;
+      padding:16px;
+      margin-top:12px;
+    }
+
+    input[type="text"], select, textarea{
+      width:100%;
+      padding:12px;
+      border-radius:12px;
+      border:2px solid #cbd5e1;
+      font-size:1rem;
+      margin-top:8px;
+      background:white;
+    }
+
+    textarea{
+      min-height:100px;
+      resize:vertical;
+    }
+
+    button{
+      background:#2563eb;
+      color:white;
+      border:none;
+      padding:11px 18px;
+      border-radius:12px;
+      font-size:1rem;
+      font-weight:bold;
+      cursor:pointer;
+      margin-top:12px;
+      margin-right:8px;
+    }
+
+    button:hover{
+      background:#1d4ed8;
+    }
+
+    .result{
+      margin-top:12px;
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:bold;
+      display:inline-block;
+    }
+
+    .ok{
+      background:#dcfce7;
+      color:#166534;
+    }
+
+    .bad{
+      background:#fee2e2;
+      color:#991b1b;
+    }
+
+    .pill{
+      display:inline-block;
+      padding:7px 12px;
+      border-radius:999px;
+      background:#e0f2fe;
+      color:#075985;
+      margin:4px 6px 4px 0;
+      font-weight:bold;
+      font-size:.95rem;
+    }
+
+    .steps{
+      counter-reset: step;
+      padding-left:0;
+      list-style:none;
+    }
+
+    .steps li{
+      background:#fff7ed;
+      border-left:6px solid #f59e0b;
+      padding:12px 14px;
+      border-radius:12px;
+      margin-bottom:10px;
+    }
+
+    .line{
+      display:block;
+      border-bottom:2px solid #94a3b8;
+      height:18px;
+      margin:8px 0;
+    }
+
+    .big-word{
+      font-size:1.1rem;
+      font-weight:bold;
+      color:#0f172a;
+    }
+
+    .footer{
+      text-align:center;
+      color:#64748b;
+      font-size:.95rem;
+      padding:8px 0 20px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#0f172a;
+      color:white;
+      padding:5px 10px;
+      border-radius:999px;
+      font-size:.85rem;
+      margin-bottom:10px;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:16px;
+    }
+
+    .center{
+      text-align:center;
+    }
+
+    .icon{
+      font-size:1.4rem;
+      margin-right:8px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <section class="hero">
+      <div class="badge">Historia · 1º ESO</div>
+      <h1>La democracia ateniense</h1>
+      <p>
+        Aprende con frases cortas, colores, actividades fáciles y ejercicios para copiar en el cuaderno.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>1. Idea principal</h2>
+      <p class="subtle">
+        La democracia ateniense fue una forma de gobierno de Atenas.
+        Se basaba en la participación de los ciudadanos en el gobierno de la ciudad.
+      </p>
+
+      <div class="visual-grid">
+        <div class="box blue">📘 Democracia = gobierno de la mayoría</div>
+        <div class="box yellow">🏛️ Surgió en Atenas</div>
+        <div class="box green">📍 Siglo V a. C.</div>
+        <div class="box purple">⭐ Momento más importante: época de Pericles</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Lo más importante que debes recordar</h2>
+      <div class="visual-grid">
+        <div class="box pink">👥 Los ciudadanos participaban en el gobierno</div>
+        <div class="box blue">🗳️ En la Asamblea votaban las leyes</div>
+        <div class="box green">🙋 También elegían representantes</div>
+        <div class="box yellow">🚫 Quien no respetaba las leyes podía ser expulsado: ostracismo</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. Palabras clave</h2>
+      <span class="pill">democracia</span>
+      <span class="pill">Atenas</span>
+      <span class="pill">ciudadanos</span>
+      <span class="pill">Asamblea</span>
+      <span class="pill">Ecclesía</span>
+      <span class="pill">leyes</span>
+      <span class="pill">representantes</span>
+      <span class="pill">Pericles</span>
+      <span class="pill">ostracismo</span>
+    </section>
+
+    <section class="card">
+      <h2>4. Actividad visual: une palabra y significado</h2>
+
+      <div class="activity">
+        <div class="task">Selecciona la opción correcta.</div>
+
+        <div style="margin-bottom:14px;">
+          <label><span class="big-word">Democracia</span></label>
+          <select id="m1">
+            <option value="">Elige una opción</option>
+            <option value="a">Gobierno de la mayoría</option>
+            <option value="b">Gobierno de una sola persona</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:14px;">
+          <label><span class="big-word">Asamblea o Ecclesía</span></label>
+          <select id="m2">
+            <option value="">Elige una opción</option>
+            <option value="a">Lugar donde se guardaban armas</option>
+            <option value="b">Lugar donde votaban las leyes</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:14px;">
+          <label><span class="big-word">Ostracismo</span></label>
+          <select id="m3">
+            <option value="">Elige una opción</option>
+            <option value="a">Expulsión o exilio</option>
+            <option value="b">Fiesta religiosa</option>
+          </select>
+        </div>
+
+        <button onclick="checkMeanings()">Comprobar</button>
+        <div id="meaningsResult"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>5. Actividad de completar</h2>
+
+      <div class="activity">
+        <div class="task">Escribe la palabra que falta.</div>
+
+        <p>1. La democracia significa gobierno de la __________.</p>
+        <input type="text" id="q1" placeholder="Escribe aquí" />
+
+        <p>2. La democracia ateniense apareció en el siglo __________ a. C.</p>
+        <input type="text" id="q2" placeholder="Ejemplo: V" />
+
+        <p>3. En la __________ los ciudadanos votaban las leyes.</p>
+        <input type="text" id="q3" placeholder="Escribe aquí" />
+
+        <p>4. En época de __________ la democracia tuvo su máximo esplendor.</p>
+        <input type="text" id="q4" placeholder="Escribe aquí" />
+
+        <p>5. El castigo de expulsión se llamaba __________.</p>
+        <input type="text" id="q5" placeholder="Escribe aquí" />
+
+        <button onclick="checkFill()">Corregir</button>
+        <div id="fillResult"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>6. Actividad de verdadero o falso</h2>
+
+      <div class="activity">
+        <div class="task">Marca si la frase es verdadera o falsa.</div>
+
+        <div style="margin-bottom:14px;">
+          <label><b>A)</b> La democracia ateniense se basaba en la participación de los ciudadanos.</label>
+          <select id="vf1">
+            <option value="">Elige</option>
+            <option value="v">Verdadero</option>
+            <option value="f">Falso</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:14px;">
+          <label><b>B)</b> La democracia ateniense nació en el siglo XX.</label>
+          <select id="vf2">
+            <option value="">Elige</option>
+            <option value="v">Verdadero</option>
+            <option value="f">Falso</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:14px;">
+          <label><b>C)</b> En la Asamblea se votaban las leyes.</label>
+          <select id="vf3">
+            <option value="">Elige</option>
+            <option value="v">Verdadero</option>
+            <option value="f">Falso</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom:14px;">
+          <label><b>D)</b> El ostracismo era un premio.</label>
+          <select id="vf4">
+            <option value="">Elige</option>
+            <option value="v">Verdadero</option>
+            <option value="f">Falso</option>
+          </select>
+        </div>
+
+        <button onclick="checkVF()">Comprobar</button>
+        <div id="vfResult"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>7. Actividad para copiar en el cuaderno</h2>
+
+      <div class="copy-box">
+        <h3>📒 Copia y completa</h3>
+        <p>1. La democracia significa gobierno de la <span class="line"></span></p>
+        <p>2. La democracia ateniense apareció en el siglo <span class="line"></span> a. C.</p>
+        <p>3. Su máximo esplendor fue en época de <span class="line"></span></p>
+        <p>4. Los ciudadanos participaban en el gobierno de la <span class="line"></span></p>
+        <p>5. En la Asamblea o <span class="line"></span> votaban las leyes</p>
+        <p>6. También elegían a sus <span class="line"></span></p>
+        <p>7. El castigo de expulsión se llamaba <span class="line"></span></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>8. Actividad paso a paso</h2>
+      <ol class="steps">
+        <li><b>Paso 1:</b> Lee las cajas azules y amarillas de arriba.</li>
+        <li><b>Paso 2:</b> Aprende 5 palabras: democracia, Atenas, Asamblea, Pericles y ostracismo.</li>
+        <li><b>Paso 3:</b> Haz el ejercicio de completar.</li>
+        <li><b>Paso 4:</b> Copia el resumen en el cuaderno.</li>
+        <li><b>Paso 5:</b> Explica con tus palabras qué hacía un ciudadano en Atenas.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>9. Escribe con tus palabras</h2>
+      <div class="activity">
+        <div class="task">Responde con una frase corta.</div>
+
+        <label>¿Qué era la democracia ateniense?</label>
+        <textarea placeholder="Ejemplo: Era una forma de gobierno de Atenas en la que participaban los ciudadanos."></textarea>
+
+        <label>¿Qué hacían los ciudadanos en la Asamblea?</label>
+        <textarea placeholder="Ejemplo: Votaban las leyes y elegían representantes."></textarea>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>10. Resumen muy fácil</h2>
+      <div class="visual-grid">
+        <div class="box blue">1. Democracia = gobierno de la mayoría</div>
+        <div class="box green">2. Surgió en Atenas</div>
+        <div class="box yellow">3. Apareció en el siglo V a. C.</div>
+        <div class="box purple">4. Brilló con Pericles</div>
+        <div class="box pink">5. Los ciudadanos participaban</div>
+        <div class="box blue">6. En la Asamblea votaban leyes</div>
+        <div class="box green">7. Elegían representantes</div>
+        <div class="box yellow">8. El exilio se llamaba ostracismo</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>11. Mini prueba final</h2>
+
+      <div class="activity">
+        <div class="task">Escribe la respuesta correcta.</div>
+
+        <p>¿Dónde votaban las leyes los ciudadanos atenienses?</p>
+        <input type="text" id="final1" placeholder="Escribe aquí" />
+
+        <p>¿Cómo se llamaba el castigo de expulsión?</p>
+        <input type="text" id="final2" placeholder="Escribe aquí" />
+
+        <p>¿En qué siglo apareció la democracia ateniense?</p>
+        <input type="text" id="final3" placeholder="Escribe aquí" />
+
+        <button onclick="checkFinal()">Corregir mini prueba</button>
+        <div id="finalResult"></div>
+      </div>
+    </section>
+
+    <section class="card center">
+      <h2>12. Autoevaluación</h2>
+      <p class="subtle">Marca cómo te sientes hoy:</p>
+      <span class="pill">😊 Lo entiendo</span>
+      <span class="pill">🙂 Casi lo entiendo</span>
+      <span class="pill">😌 Necesito repasarlo</span>
+    </section>
+
+    <div class="footer">
+      Material visual y adaptado para trabajar la democracia ateniense.
+    </div>
+  </div>
+
+  <script>
+    function normalizeText(text) {
+      return text
+        .toLowerCase()
+        .trim()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function showResult(id, ok, textOk, textBad) {
+      const el = document.getElementById(id);
+      el.className = "result " + (ok ? "ok" : "bad");
+      el.innerHTML = ok ? textOk : textBad;
+    }
+
+    function checkMeanings() {
+      const m1 = document.getElementById("m1").value;
+      const m2 = document.getElementById("m2").value;
+      const m3 = document.getElementById("m3").value;
+
+      let score = 0;
+      if (m1 === "a") score++;
+      if (m2 === "b") score++;
+      if (m3 === "a") score++;
+
+      const ok = score === 3;
+      showResult(
+        "meaningsResult",
+        ok,
+        "✅ Muy bien. Has acertado " + score + " de 3.",
+        "❌ Has acertado " + score + " de 3. Repasa democracia, Asamblea y ostracismo."
+      );
+    }
+
+    function checkFill() {
+      const q1 = normalizeText(document.getElementById("q1").value);
+      const q2 = normalizeText(document.getElementById("q2").value);
+      const q3 = normalizeText(document.getElementById("q3").value);
+      const q4 = normalizeText(document.getElementById("q4").value);
+      const q5 = normalizeText(document.getElementById("q5").value);
+
+      let score = 0;
+      if (q1 === "mayoria") score++;
+      if (q2 === "v" || q2 === "5" || q2 === "siglo v") score++;
+      if (q3 === "asamblea" || q3 === "ecclesia") score++;
+      if (q4 === "pericles") score++;
+      if (q5 === "ostracismo") score++;
+
+      const ok = score >= 4;
+      showResult(
+        "fillResult",
+        ok,
+        "✅ Muy bien. Has acertado " + score + " de 5.",
+        "❌ Has acertado " + score + " de 5. Repasa las palabras clave."
+      );
+    }
+
+    function checkVF() {
+      const vf1 = document.getElementById("vf1").value;
+      const vf2 = document.getElementById("vf2").value;
+      const vf3 = document.getElementById("vf3").value;
+      const vf4 = document.getElementById("vf4").value;
+
+      let score = 0;
+      if (vf1 === "v") score++;
+      if (vf2 === "f") score++;
+      if (vf3 === "v") score++;
+      if (vf4 === "f") score++;
+
+      const ok = score === 4;
+      showResult(
+        "vfResult",
+        ok,
+        "✅ Perfecto. Has acertado " + score + " de 4.",
+        "❌ Has acertado " + score + " de 4. Vuelve a leer el resumen fácil."
+      );
+    }
+
+    function checkFinal() {
+      const f1 = normalizeText(document.getElementById("final1").value);
+      const f2 = normalizeText(document.getElementById("final2").value);
+      const f3 = normalizeText(document.getElementById("final3").value);
+
+      let score = 0;
+
+      if (f1 === "asamblea" || f1 === "ecclesia") score++;
+      if (f2 === "ostracismo") score++;
+      if (f3 === "v" || f3 === "5" || f3 === "siglo v") score++;
+
+      const ok = score >= 2;
+      showResult(
+        "finalResult",
+        ok,
+        "🏆 Muy bien. Resultado: " + score + " de 3.",
+        "📘 Resultado: " + score + " de 3. Repite la parte de la Asamblea, el siglo V y el ostracismo."
+      );
+    }
+  </script>
+</body>
+</html>
